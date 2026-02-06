@@ -97,11 +97,11 @@ This skill gives your AI tool practical guidance. It can:
 indie-dev-skill/
   SKILL.md
   references/
-    adapty-2025-in-app-subscriptions-highlights.md - Pricing mix, regional trends, and paywall tactics
+    in-app-subscriptions-2025-highlights.md - Pricing mix, regional trends, and paywall tactics
     mobile-onboarding-usability-guidance.md - When onboarding is justified and how to keep it minimal
-    revenuecat-2025-onboarding-playbook.md - Onboarding rules, benchmarks, and tests
-    revenuecat-2025-paywall-playbook.md - Pricing rules, trial strategy, benchmarks, and tests
-    revenuecat-2025-subscription-apps-highlights.md - Trial timing, conversion, and paywall placement
+    onboarding-playbook-2025.md - Onboarding rules, benchmarks, and tests
+    paywall-playbook-2025.md - Pricing rules, trial strategy, benchmarks, and tests
+    subscription-apps-2025-highlights.md - Trial timing, conversion, and paywall placement
 ```
 <!-- END REFERENCE STRUCTURE -->
 

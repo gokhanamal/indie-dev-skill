@@ -83,11 +83,11 @@ Return outputs using these sections in order:
 7. Risks And Tradeoffs
 
 ## References
-- `references/revenuecat-2025-onboarding-playbook.md` - Onboarding rules, benchmarks, and tests
-- `references/revenuecat-2025-paywall-playbook.md` - Pricing rules, trial strategy, benchmarks, and tests
-- `references/revenuecat-2025-subscription-apps-highlights.md` - Report highlights on trial timing, conversion, and paywall placement
+- `references/onboarding-playbook-2025.md` - Onboarding rules, benchmarks, and tests
+- `references/paywall-playbook-2025.md` - Pricing rules, trial strategy, benchmarks, and tests
+- `references/subscription-apps-2025-highlights.md` - Report highlights on trial timing, conversion, and paywall placement
 - `references/mobile-onboarding-usability-guidance.md` - Usability-first guidance on when onboarding is justified and how to keep it minimal
-- `references/adapty-2025-in-app-subscriptions-highlights.md` - Pricing mix, regional trends, and paywall tactics
+- `references/in-app-subscriptions-2025-highlights.md` - Pricing mix, regional trends, and paywall tactics
 
 ## Philosophy
 - The decision to subscribe happens before the paywall
