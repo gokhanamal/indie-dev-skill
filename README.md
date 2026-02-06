@@ -85,10 +85,10 @@ This skill gives your AI tool practical guidance. It can:
 
 ## Example Prompts
 
-### Prompt 1: New App Launch
+### Prompt 1: I Only Have an Idea
 ```text
-Use the indie-dev-skill skill. Build an onboarding + paywall plan for a new AI scanner app in the US.
-No existing funnel data. I need copy and 3 experiments.
+Use the indie-dev-skill skill. I am building a habit tracker app for busy professionals.
+Create a simple onboarding + paywall plan with suggested pricing, trial setup, and copy.
 ```
 
 Expected output shape:
@@ -102,11 +102,10 @@ Experiment Plan
 Risks And Tradeoffs
 ```
 
-### Prompt 2: Underperforming Conversion
+### Prompt 2: I Have Little Context
 ```text
-Use the indie-dev-skill skill. My metrics are:
-download->trial 4.1%, trial->paid 21%. Trial is 3 days on monthly only.
-Suggest fixes and tests.
+Use the indie-dev-skill skill. I have an existing note-taking app but no analytics yet.
+Give me a default onboarding and paywall setup I can ship this week.
 ```
 
 Expected output shape:
@@ -120,10 +119,10 @@ Experiment Plan
 Risks And Tradeoffs
 ```
 
-### Prompt 3: Regionalization
+### Prompt 3: Quick Copy Request
 ```text
-Use the indie-dev-skill skill. We are launching in US + Western Europe.
-Give a regional pricing/trial strategy with guardrails.
+Use the indie-dev-skill skill. Write onboarding and paywall copy for a photo cleanup app.
+Tone: clear and friendly. Keep it short.
 ```
 
 Expected output shape:
@@ -133,7 +132,6 @@ Recommended Onboarding Flow
 Paywall Structure
 Pricing And Trial Setup
 Copy Variants
-Experiment Plan
 Risks And Tradeoffs
 ```
 
