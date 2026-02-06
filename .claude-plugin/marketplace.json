@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/refs/heads/main/marketplace/marketplace.schema.json",
+  "name": "indie-dev-skill",
+  "version": "1.0.0",
+  "owner": {
+    "name": "gokhanamal",
+    "email": "hello@fyncapps.com"
+  },
+  "metadata": {
+    "description": "Onboarding and paywall strategy skill for subscription-focused mobile utility apps."
+  },
+  "plugins": [
+    {
+      "name": "indie-dev-skill",
+      "description": "Design onboarding, paywall, pricing, trial copy, and conversion experiment plans for indie mobile apps.",
+      "repository": "https://github.com/gokhanamal/indie-dev-skill",
+      "version": "1.0.0",
+      "author": {
+        "name": "gokhanamal",
+        "email": "hello@fyncapps.com"
+      },
+      "license": "MIT",
+      "category": "development",
+      "keywords": [
+        "agent-skills",
+        "mobile-apps",
+        "onboarding",
+        "paywall",
+        "subscriptions",
+        "growth",
+        "pricing",
+        "trials"
+      ],
+      "tags": [
+        "agent-skills",
+        "mobile-apps",
+        "onboarding",
+        "paywall",
+        "subscriptions",
+        "growth",
+        "pricing",
+        "trials"
+      ],
+      "source": "./",
+      "skills": [
+        "./indie-dev-skill"
+      ]
+    }
+  ]
+}
