@@ -1,6 +1,5 @@
 # State of In-App Subscriptions 2025 - Highlights (Pricing + Paywalls)
 
-Source: Adapty Pricing Index / State of In-App Subscriptions 2025 (summarized for internal use)
 Confidence: Medium (cross-market directional signals)
 
 ## Market and Plan Mix

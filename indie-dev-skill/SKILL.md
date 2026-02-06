@@ -46,7 +46,7 @@ Example output skeleton:
 ```
 
 ## Overview
-Use this skill to build onboarding and paywall flows that drive Day-0 trial starts, annual plan adoption, and long-term retention. It combines onboarding guidance with paywall and pricing strategy.
+Use this skill to build onboarding and paywall flows that drive Day-0 trial starts, annual plan adoption, and long-term retention. It combines onboarding guidance with paywall and pricing strategy, with the paywall shown at the end of onboarding after meaningful user interaction.
 
 ## Scope And Assumptions
 - Primary scope: mobile apps with subscription-led growth
@@ -63,6 +63,20 @@ When the user has limited data or engineering bandwidth:
 - Prefer single-variable tests over multi-variable designs
 - Focus first on improving `download -> trial`, then `trial -> paid`
 - Include a 1-week shipping plan with concrete steps
+
+## Onboarding Placement Rule
+- Require at least one meaningful user interaction before the paywall (input, selection, quiz, scan, or setup step)
+- Show the paywall at the end of onboarding, not before the user interacts
+- Ensure onboarding demonstrates user-specific value before pricing exposure
+
+## Onboarding UX Rules
+- Prefer no dedicated onboarding when the core flow is already obvious
+- Use dedicated onboarding only when user data, personalization, or novel workflow explanation is required
+- Keep onboarding short (typically 3-5 screens) with one concept per step
+- Keep onboarding skippable with visible `Skip` and a clear progress indicator
+- Avoid feature-promo carousels at first launch unless the feature is truly unfamiliar
+- Prefer contextual help and in-flow guidance over long tutorial slides
+- Defer visual theme customization until after users understand core app value
 
 ## Input Checklist
 Capture these inputs before recommendations:
@@ -99,6 +113,8 @@ Never include:
 - Identify user problem
 - Personalize quickly (scan, quiz, or setup)
 - Demonstrate value before pricing
+- Include at least one interaction step before presenting the paywall
+- Keep each step focused on one job and ensure skip/progress affordances are visible
 
 ### 3) Design paywall
 - Multi-screen value -> proof -> trial -> pricing
@@ -108,7 +124,7 @@ Never include:
 ### 4) Validate against defaults
 - Trial attached to annual plan, 7–14 days
 - “Cancel anytime” visible
-- Paywall appears inside onboarding
+- Paywall appears at the end of onboarding after interaction
 
 ### 5) Define experiments
 - 2–4 A/B tests with hypotheses and success metrics
@@ -140,7 +156,9 @@ Never include:
 ## Deliverables
 Provide all or subset as requested:
 - Onboarding screen sequence with goals
+- Interaction checkpoint before paywall
 - Paywall flow outline (screen-by-screen)
+- UI design tips for onboarding and paywall layout
 - Pricing table and selection hierarchy
 - Copy blocks (headline, subhead, benefits, CTA, disclaimers)
 - Loss-aversion messaging variants
@@ -168,11 +186,12 @@ Return outputs using these sections in order:
 8. Next 7 Days Plan
 
 ## References
-- `references/onboarding-playbook-2025.md` - Onboarding rules, benchmarks, and tests
-- `references/paywall-playbook-2025.md` - Pricing rules, trial strategy, benchmarks, and tests
-- `references/subscription-apps-2025-highlights.md` - Report highlights on trial timing, conversion, and paywall placement
+- `references/onboarding-playbook.md` - Onboarding rules, benchmarks, and tests
+- `references/paywall-playbook.md` - Pricing rules, trial strategy, benchmarks, and tests
+- `references/subscription-apps-highlights.md` - Report highlights on trial timing, conversion, and paywall placement
 - `references/mobile-onboarding-usability-guidance.md` - Usability-first guidance on when onboarding is justified and how to keep it minimal
-- `references/in-app-subscriptions-2025-highlights.md` - Pricing mix, regional trends, and paywall tactics
+- `references/mobile-onboarding-paywall-design-tips.md` - Practical mobile UI design tips for onboarding and paywall presentation
+- `references/in-app-subscriptions-highlights.md` - Pricing mix, regional trends, and paywall tactics
 - `references/metric-definitions.md` - Funnel metric definitions and calculation boundaries
 
 ## Philosophy

@@ -1,6 +1,5 @@
 # State of Subscription Apps 2025 - Highlights (Onboarding + Paywall)
 
-Source: RevenueCat State of Subscription Apps 2025 (summarized for internal use)
 Confidence: Medium (derived from summary notes, use as directional guidance)
 
 ## Core Takeaways

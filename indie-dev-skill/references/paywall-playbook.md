@@ -1,6 +1,5 @@
 # Paywall Playbook (Utility Apps, 2025)
 
-Source: RevenueCat State of Subscription Apps 2025 (summarized for internal use)
 Confidence: Medium (directional planning guidance)
 
 ## Goals

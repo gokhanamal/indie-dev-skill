@@ -19,7 +19,7 @@ npx skills add https://github.com/gokhanamal/indie-dev-skill --skill indie-dev-s
 ```
 
 Then use the skill in your AI agent, for example:
-> Use the indie-dev-skill skill and design an onboarding flow with an early paywall and annual plan focus
+> Use the indie-dev-skill skill and design an onboarding flow with interaction before the paywall and annual plan focus
 
 ### Option B: Claude Code Plugin
 
@@ -70,7 +70,10 @@ This skill gives your AI tool practical guidance. It can:
 - Identify the user’s core problem and success moment
 - Personalize early (scan, quiz, setup)
 - Demonstrate value before pricing
-- Place the paywall inside onboarding
+- Require at least one interaction before the paywall
+- Show the paywall at the end of onboarding
+- Keep onboarding short, skippable, and one-concept-per-step
+- Apply mobile UI hierarchy patterns for clearer conversion paths
 
 ### Build Paywalls That Convert
 - Multi-screen paywall flow (value -> proof -> trial -> pricing)
@@ -149,12 +152,13 @@ Risks And Tradeoffs
 indie-dev-skill/
   SKILL.md
   references/
+    mobile-onboarding-paywall-design-tips.md - Practical mobile UI design tips for onboarding and paywall presentation
     metric-definitions.md - Funnel metric definitions and calculation boundaries
-    in-app-subscriptions-2025-highlights.md - Pricing mix, regional trends, and paywall tactics
+    in-app-subscriptions-highlights.md - Pricing mix, regional trends, and paywall tactics
     mobile-onboarding-usability-guidance.md - When onboarding is justified and how to keep it minimal
-    onboarding-playbook-2025.md - Onboarding rules, benchmarks, and tests
-    paywall-playbook-2025.md - Pricing rules, trial strategy, benchmarks, and tests
-    subscription-apps-2025-highlights.md - Trial timing, conversion, and paywall placement
+    onboarding-playbook.md - Onboarding rules, benchmarks, and tests
+    paywall-playbook.md - Pricing rules, trial strategy, benchmarks, and tests
+    subscription-apps-highlights.md - Trial timing, conversion, and paywall placement
 ```
 <!-- END REFERENCE STRUCTURE -->
 
