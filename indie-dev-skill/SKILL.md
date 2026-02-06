@@ -1,6 +1,6 @@
 ---
 name: indie-dev-skill
-description: Design onboarding and subscription paywalls for mobile utility apps with pricing, trial, copy, and A/B test guidance for conversion-focused growth decisions.
+description: Design onboarding and subscription paywalls for mobile apps with pricing, trial, copy, and A/B test guidance for conversion-focused growth decisions.
 ---
 
 # Indie Dev Skills
@@ -19,7 +19,7 @@ Example output skeleton:
 ```markdown
 ## Assumptions
 - Region: US
-- Category: Utility app
+- Category: Mobile app
 
 ## Recommended Onboarding Flow
 - Screen 1: Problem framing
@@ -30,7 +30,9 @@ Example output skeleton:
 - Value -> proof -> trial -> pricing
 
 ## Pricing And Trial Setup
-- Weekly, monthly, annual with annual default
+- Default: annual plan with trial
+- Second option: weekly plan
+- Optional third option: monthly plan
 
 ## Copy Variants
 - Headline A, Headline B
@@ -47,10 +49,20 @@ Example output skeleton:
 Use this skill to build onboarding and paywall flows that drive Day-0 trial starts, annual plan adoption, and long-term retention. It combines onboarding guidance with paywall and pricing strategy.
 
 ## Scope And Assumptions
-- Primary scope: mobile utility apps with subscription-led growth
+- Primary scope: mobile apps with subscription-led growth
+- Primary user: solo developers and small indie teams with limited time and analytics depth
 - If region is missing, assume US and label that assumption explicitly
 - If platform is missing, provide platform-agnostic guidance
 - Treat all numeric benchmarks as rough planning targets, not guarantees
+- Utility-app benchmark references are directional; adapt recommendations by category
+
+## Indie Execution Mode
+When the user has limited data or engineering bandwidth:
+- Prioritize the smallest shippable onboarding + paywall flow over complex optimization plans
+- Recommend no more than 2 experiments per cycle
+- Prefer single-variable tests over multi-variable designs
+- Focus first on improving `download -> trial`, then `trial -> paid`
+- Include a 1-week shipping plan with concrete steps
 
 ## Input Checklist
 Capture these inputs before recommendations:
@@ -64,8 +76,9 @@ Capture these inputs before recommendations:
 If inputs are missing, default to:
 - Region: US
 - Currency: USD
-- Category: Utility
+- Category: Mobile app
 - Trial: 7-14 days attached to annual
+- Team context: indie/solo, low analytics maturity
 
 ## Disallowed Outputs
 Never include:
@@ -99,6 +112,7 @@ Never include:
 
 ### 5) Define experiments
 - 2–4 A/B tests with hypotheses and success metrics
+- If indie/low-data: narrow to 1–2 tests and run sequentially
 
 ## Decision Policy (Conflict Arbitration)
 - Start with Annual Default when:
@@ -111,17 +125,16 @@ Never include:
 - If guidance conflicts, prioritize current product metrics over static defaults
 - If metrics are unavailable, provide both variants and mark one as primary with rationale
 
-## Starter Defaults (US Utility Apps, unless user overrides)
+## Starter Defaults (US Mobile Apps, unless user overrides)
 - Currency scope: USD only; localize prices before applying outside US
-- Weekly: $4.99
-- Monthly: $5.99
-- Annual: $29.99 (Best Value highlight, default selected)
-- Trial: 7-14 days, attached to annual, "Cancel anytime" visible
-- Alternative variant to test: weekly-first entry with annual upsell
+- Primary default: Annual $29.99 with 7-14 day trial ("Best Value", default selected, "Cancel anytime" visible)
+- Second option: Weekly $4.99
+- Optional third option: Monthly $5.99
+- Recommended first test variant: weekly-first entry with annual upsell
 
 ## Conflict Matrix
-- `Annual default`: best for maximizing annual adoption and stronger upfront value framing
-- `Weekly-first`: best for reducing Day-0 commitment friction in price-sensitive segments
+- `Annual + trial default`: best for maximizing annual adoption and stronger upfront value framing
+- `Weekly second option`: best for reducing Day-0 commitment friction in price-sensitive segments
 - `Tie-breaker`: pick the option that improves `download -> trial` without harming `trial -> paid`
 
 ## Deliverables
@@ -132,6 +145,16 @@ Provide all or subset as requested:
 - Copy blocks (headline, subhead, benefits, CTA, disclaimers)
 - Loss-aversion messaging variants
 - Experiment plan with success metrics
+- Lightweight implementation plan (what to ship this week)
+
+## Minimum Event List (Optional)
+If the user asks for instrumentation, keep it minimal:
+- `onboarding_started`
+- `onboarding_completed`
+- `paywall_viewed`
+- `trial_started`
+- `subscription_purchased`
+- `trial_canceled`
 
 ## Required Response Template
 Return outputs using these sections in order:
@@ -142,6 +165,7 @@ Return outputs using these sections in order:
 5. Copy Variants
 6. Experiment Plan (2-4 tests with hypothesis, primary metric, guardrail)
 7. Risks And Tradeoffs
+8. Next 7 Days Plan
 
 ## References
 - `references/onboarding-playbook-2025.md` - Onboarding rules, benchmarks, and tests

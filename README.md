@@ -1,6 +1,6 @@
 # Indie Dev Skills
 
-Expert guidance for any AI coding tool that supports the [Agent Skills open format](https://agentskills.io/home) — onboarding and subscription paywalls for mobile utility apps, with a focus on Day-0 trials, annual adoption, and value-first messaging.
+Expert guidance for any AI coding tool that supports the [Agent Skills open format](https://agentskills.io/home) — onboarding and subscription paywalls for mobile apps, with a focus on Day-0 trials, annual adoption, and value-first messaging.
 
 This skill distills practical onboarding and paywall best practices into actionable, concise references for agents and growth workflows.
 
