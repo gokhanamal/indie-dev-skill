@@ -83,6 +83,60 @@ This skill gives your AI tool practical guidance. It can:
 - Pricing mix insights (weekly vs monthly vs annual)
 - A/B tests for timing, copy, trial length, and plan defaults
 
+## Example Prompts
+
+### Prompt 1: New App Launch
+```text
+Use the indie-dev-skill skill. Build an onboarding + paywall plan for a new AI scanner app in the US.
+No existing funnel data. I need copy and 3 experiments.
+```
+
+Expected output shape:
+```text
+Assumptions
+Recommended Onboarding Flow
+Paywall Structure
+Pricing And Trial Setup
+Copy Variants
+Experiment Plan
+Risks And Tradeoffs
+```
+
+### Prompt 2: Underperforming Conversion
+```text
+Use the indie-dev-skill skill. My metrics are:
+download->trial 4.1%, trial->paid 21%. Trial is 3 days on monthly only.
+Suggest fixes and tests.
+```
+
+Expected output shape:
+```text
+Assumptions
+Recommended Onboarding Flow
+Paywall Structure
+Pricing And Trial Setup
+Copy Variants
+Experiment Plan
+Risks And Tradeoffs
+```
+
+### Prompt 3: Regionalization
+```text
+Use the indie-dev-skill skill. We are launching in US + Western Europe.
+Give a regional pricing/trial strategy with guardrails.
+```
+
+Expected output shape:
+```text
+Assumptions
+Recommended Onboarding Flow
+Paywall Structure
+Pricing And Trial Setup
+Copy Variants
+Experiment Plan
+Risks And Tradeoffs
+```
+
 ## What Makes This Skill Different
 
 **Non-Opinionated**: Focuses on conversion fundamentals, not app architecture.
@@ -97,6 +151,7 @@ This skill gives your AI tool practical guidance. It can:
 indie-dev-skill/
   SKILL.md
   references/
+    metric-definitions.md - Funnel metric definitions and calculation boundaries
     in-app-subscriptions-2025-highlights.md - Pricing mix, regional trends, and paywall tactics
     mobile-onboarding-usability-guidance.md - When onboarding is justified and how to keep it minimal
     onboarding-playbook-2025.md - Onboarding rules, benchmarks, and tests

@@ -5,6 +5,44 @@ description: Design onboarding and subscription paywalls for mobile utility apps
 
 # Indie Dev Skills
 
+## Quick Start
+When invoked, return output in this exact section order:
+1. Assumptions
+2. Recommended Onboarding Flow
+3. Paywall Structure
+4. Pricing And Trial Setup
+5. Copy Variants
+6. Experiment Plan (2-4 tests with hypothesis, primary metric, guardrail)
+7. Risks And Tradeoffs
+
+Example output skeleton:
+```markdown
+## Assumptions
+- Region: US
+- Category: Utility app
+
+## Recommended Onboarding Flow
+- Screen 1: Problem framing
+- Screen 2: Personalization
+- Screen 3: Value reveal
+
+## Paywall Structure
+- Value -> proof -> trial -> pricing
+
+## Pricing And Trial Setup
+- Weekly, monthly, annual with annual default
+
+## Copy Variants
+- Headline A, Headline B
+
+## Experiment Plan
+- Test 1: hypothesis, primary metric, guardrail
+- Test 2: hypothesis, primary metric, guardrail
+
+## Risks And Tradeoffs
+- Potential annual friction in price-sensitive users
+```
+
 ## Overview
 Use this skill to build onboarding and paywall flows that drive Day-0 trial starts, annual plan adoption, and long-term retention. It combines onboarding guidance with paywall and pricing strategy.
 
@@ -13,6 +51,29 @@ Use this skill to build onboarding and paywall flows that drive Day-0 trial star
 - If region is missing, assume US and label that assumption explicitly
 - If platform is missing, provide platform-agnostic guidance
 - Treat all numeric benchmarks as rough planning targets, not guarantees
+
+## Input Checklist
+Capture these inputs before recommendations:
+- Region and currency
+- App category and target user
+- Current plans and price points
+- Trial setup (length, plan attachment, timing)
+- Funnel metrics (`download -> trial`, `trial -> paid`, `download -> paid`)
+- Constraints (brand, legal copy requirements, launch timing)
+
+If inputs are missing, default to:
+- Region: US
+- Currency: USD
+- Category: Utility
+- Trial: 7-14 days attached to annual
+
+## Disallowed Outputs
+Never include:
+- Legal, tax, or compliance advice
+- Backend billing architecture or server implementation plans
+- SDK-specific setup instructions or tool walkthroughs
+- App architecture mandates (MVVM/MVC or project-structure prescriptions)
+- Guaranteed outcome claims from benchmark data
 
 ## Workflow Decision Tree
 
@@ -88,6 +149,7 @@ Return outputs using these sections in order:
 - `references/subscription-apps-2025-highlights.md` - Report highlights on trial timing, conversion, and paywall placement
 - `references/mobile-onboarding-usability-guidance.md` - Usability-first guidance on when onboarding is justified and how to keep it minimal
 - `references/in-app-subscriptions-2025-highlights.md` - Pricing mix, regional trends, and paywall tactics
+- `references/metric-definitions.md` - Funnel metric definitions and calculation boundaries
 
 ## Philosophy
 - The decision to subscribe happens before the paywall
