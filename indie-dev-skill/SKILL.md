@@ -1,6 +1,6 @@
 ---
 name: indie-dev-skill
-description: Design onboarding and subscription paywalls for mobile apps with pricing, trial, copy, and A/B test guidance for conversion-focused growth decisions.
+description: Design onboarding and subscription paywalls for mobile apps with pricing, trial, and copy guidance for conversion-focused growth decisions.
 ---
 
 # Indie Dev Skills
@@ -12,8 +12,8 @@ When invoked, return output in this exact section order:
 3. Paywall Structure
 4. Pricing And Trial Setup
 5. Copy Variants
-6. Experiment Plan (2-4 tests with hypothesis, primary metric, guardrail)
-7. Risks And Tradeoffs
+6. Risks And Tradeoffs
+7. Next 7 Days Plan
 
 Example output skeleton:
 ```markdown
@@ -37,31 +37,30 @@ Example output skeleton:
 ## Copy Variants
 - Headline A, Headline B
 
-## Experiment Plan
-- Test 1: hypothesis, primary metric, guardrail
-- Test 2: hypothesis, primary metric, guardrail
-
 ## Risks And Tradeoffs
 - Potential annual friction in price-sensitive users
+
+## Next 7 Days Plan
+- Day 1-2: Ship onboarding + paywall
+- Day 3-4: Refine copy and visuals
+- Day 5-7: Iterate based on qualitative feedback
 ```
 
 ## Overview
-Use this skill to build onboarding and paywall flows that drive Day-0 trial starts, annual plan adoption, and long-term retention. It combines onboarding guidance with paywall and pricing strategy, with the paywall shown at the end of onboarding after meaningful user interaction.
+Use this skill to build onboarding and paywall flows that improve conversion rate for indie apps with limited historical data. It combines onboarding guidance with paywall and pricing strategy, with the paywall shown at the end of onboarding after meaningful user interaction.
 
 ## Scope And Assumptions
 - Primary scope: mobile apps with subscription-led growth
 - Primary user: solo developers and small indie teams with limited time and analytics depth
 - If region is missing, assume US and label that assumption explicitly
 - If platform is missing, provide platform-agnostic guidance
-- Treat all numeric benchmarks as rough planning targets, not guarantees
+- Treat all numeric benchmarks as optional context; avoid numeric targets when no prior data exists
 - Utility-app benchmark references are directional; adapt recommendations by category
 
 ## Indie Execution Mode
 When the user has limited data or engineering bandwidth:
 - Prioritize the smallest shippable onboarding + paywall flow over complex optimization plans
-- Recommend no more than 2 experiments per cycle
-- Prefer single-variable tests over multi-variable designs
-- Focus first on improving `download -> trial`, then `trial -> paid`
+- Focus on a single primary conversion rate (paywall view -> trial or purchase)
 - Include a 1-week shipping plan with concrete steps
 
 ## Onboarding Placement Rule
@@ -77,6 +76,8 @@ When the user has limited data or engineering bandwidth:
 - Avoid feature-promo carousels at first launch unless the feature is truly unfamiliar
 - Prefer contextual help and in-flow guidance over long tutorial slides
 - Defer visual theme customization until after users understand core app value
+## Paywall Interaction Rules
+- Use a close button only in the top-left corner
 
 ## Input Checklist
 Capture these inputs before recommendations:
@@ -84,7 +85,7 @@ Capture these inputs before recommendations:
 - App category and target user
 - Current plans and price points
 - Trial setup (length, plan attachment, timing)
-- Funnel metrics (`download -> trial`, `trial -> paid`, `download -> paid`)
+- Funnel metrics only if available (use them to pick a single primary conversion rate)
 - Constraints (brand, legal copy requirements, launch timing)
 
 If inputs are missing, default to:
@@ -126,9 +127,8 @@ Never include:
 - “Cancel anytime” visible
 - Paywall appears at the end of onboarding after interaction
 
-### 5) Define experiments
-- 2–4 A/B tests with hypotheses and success metrics
-- If indie/low-data: narrow to 1–2 tests and run sequentially
+### 5) Plan a simple iteration loop
+- Ship, observe qualitative feedback, and iterate on copy and layout
 
 ## Decision Policy (Conflict Arbitration)
 - Start with Annual Default when:
@@ -145,13 +145,13 @@ Never include:
 - Currency scope: USD only; localize prices before applying outside US
 - Primary default: Annual $29.99 with 7-14 day trial ("Best Value", default selected, "Cancel anytime" visible)
 - Second option: Weekly $4.99
-- Optional third option: Monthly $5.99
+- Do not include a monthly plan as the default or primary option
 - Recommended first test variant: weekly-first entry with annual upsell
 
 ## Conflict Matrix
-- `Annual + trial default`: best for maximizing annual adoption and stronger upfront value framing
-- `Weekly second option`: best for reducing Day-0 commitment friction in price-sensitive segments
-- `Tie-breaker`: pick the option that improves `download -> trial` without harming `trial -> paid`
+- `Annual + trial default`: best for conversion when users value longer commitment and trust the product
+- `Weekly second option`: best for conversion when price sensitivity or commitment friction is high
+- `Tie-breaker`: pick the option most likely to improve paywall conversion rate based on user context
 
 ## Deliverables
 Provide all or subset as requested:
@@ -162,7 +162,6 @@ Provide all or subset as requested:
 - Pricing table and selection hierarchy
 - Copy blocks (headline, subhead, benefits, CTA, disclaimers)
 - Loss-aversion messaging variants
-- Experiment plan with success metrics
 - Lightweight implementation plan (what to ship this week)
 
 ## Minimum Event List (Optional)
@@ -181,9 +180,8 @@ Return outputs using these sections in order:
 3. Paywall Structure
 4. Pricing And Trial Setup
 5. Copy Variants
-6. Experiment Plan (2-4 tests with hypothesis, primary metric, guardrail)
-7. Risks And Tradeoffs
-8. Next 7 Days Plan
+6. Risks And Tradeoffs
+7. Next 7 Days Plan
 
 ## References
 - `references/onboarding-playbook.md` - Onboarding rules, benchmarks, and tests
